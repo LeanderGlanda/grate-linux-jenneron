@@ -426,7 +426,11 @@ static int tps65910_rtc_probe(struct platform_device *pdev)
 
 	tps_rtc->irq = irq;
 	if (irq != -1) {
-		device_set_wakeup_capable(&pdev->dev, 1);
+		if (device_may_wakeup(tps65910->dev))
+			device_init_wakeup(&pdev->dev, 1);
+		else
+			device_set_wakeup_capable(&pdev->dev, 1);
+
 		tps_rtc->rtc->ops = &tps65910_rtc_ops;
 	} else
 		tps_rtc->rtc->ops = &tps65910_rtc_ops_noirq;
