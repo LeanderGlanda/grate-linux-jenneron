@@ -253,6 +253,9 @@ static int tps65910_irq_init(struct tps65910 *tps65910, int irq,
 		dev_warn(tps65910->dev, "Failed to add irq_chip %d\n", ret);
 		tps65910->chip_irq = 0;
 	}
+
+	device_set_wakeup_capable(tps65910->dev, 1);
+
 	return ret;
 }
 
