@@ -1270,6 +1270,7 @@ dtb-$(CONFIG_ARCH_TEGRA_3x_SOC) += \
 	tegra30-ouya.dtb
 dtb-$(CONFIG_ARCH_TEGRA_114_SOC) += \
 	tegra114-dalmore.dtb \
+	tegra114-microsoft-surfacert2.dtb \
 	tegra114-roth.dtb \
 	tegra114-tn7.dtb
 dtb-$(CONFIG_ARCH_TEGRA_124_SOC) += \
