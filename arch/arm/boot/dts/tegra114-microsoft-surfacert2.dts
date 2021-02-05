@@ -19,6 +19,17 @@
 		reg = <0x80000000 0x80000000>;
 	};
 
+	reserved-memory {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		ranges;
+
+		efifb@fc978000 {
+			reg = <0xfc978000 0x800000>;
+			no-map;
+		};
+	};
+
 	serial@70006300 {
 		status = "okay";
 	};
