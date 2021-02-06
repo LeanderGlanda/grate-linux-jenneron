@@ -11,10 +11,6 @@
 		serial0 = &uartd;
 	};
 
-	chosen {
-		stdout-path = "serial0:115200n8";
-	};
-
 	memory@80000000 {
 		reg = <0x80000000 0x80000000>;
 	};
