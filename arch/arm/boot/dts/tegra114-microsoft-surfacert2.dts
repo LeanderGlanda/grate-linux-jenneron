@@ -38,6 +38,7 @@
 
 	usb@7d008000 {
 		status = "okay";
+		dr_mode = "peripheral";
 	};
 
 	usb-phy@7d008000 {
